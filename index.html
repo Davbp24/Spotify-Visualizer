@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="container">
     
     <header>
 
@@ -26,13 +26,13 @@
     </header>
 
     <section class="info-section">
-        <div>
+        <div class="left-container">
             <h2>About</h2>
             <p>Welcome to the <b>Spotify Data Visualizer</b>. This
             project takes a large data set of of music and organizes it into categories
             you can select.</p>
         </div>
-        <div>
+        <div class ="right-container">
            <h2>Visualizations</h2>
            <ul>
                <li>Most Common Genre (Bar Graph)</li>
@@ -43,10 +43,27 @@
 
     </section>
 
+    <section class="result-section">
+        <div id="result-container">
+            <h2 id="result"> Result </h2>
+            <div class="button-container">
+                <button class="spotify-button result-button"> Most Common Genre</button>
+                <button class="spotify-button result-button"> Year  Song Released</button>
+                <button class="spotify-button result-button"> Loudest Song</button>
+            </div>
+
+            <div class="result-card" id="result-card">
+                <div class="result-content">
+                    <p class="result-intro-text">Select a category and chart type to visualize data.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
     <footer>
-        <ul>
+        <ul class="social-links">
             <li>
                 <a href="https://github.com/Davbp24">My GitHub</a>
             </li>
@@ -57,6 +74,10 @@
             
         </ul>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="script.js"></script>
+
 
 </body>
 </html>
